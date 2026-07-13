@@ -49,9 +49,12 @@ namespace BTL
                 return;
             }
 
-            if (role != "Admin" && role != "Student")
+            if (role == "Student")
             {
-                Response.Redirect("../DangNhap/login.aspx");
+                Response.Write(
+                    "<script>alert('Bạn không có quyền truy cập!');" +
+                    "window.location='../QuanLyHocVien/QuanLyHocVien.aspx';</script>");
+                return;
             }
         }
 

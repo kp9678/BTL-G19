@@ -94,7 +94,7 @@ namespace Trang_đăng_nhập
                 }
                 else if (role == "Student")
                 {
-                    Response.Redirect("../TrangChu/Default.aspx");
+                    Response.Redirect("../QuanLyHocVien/QuanLyHocVien.aspx");
                 }
             }
             else
