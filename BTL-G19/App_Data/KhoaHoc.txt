@@ -1,0 +1,8 @@
+KH01|HTML|Cơ bản|Đang mở|3000000|16 buổi
+KH02|CSS|Nâng cao|Đã đóng|4500000|19 buổi
+KH03|ASP.NET|Nâng cao|Đang mở|5000000|20 buổi
+KH04|JavaScript|Cơ bản|Đang mở|2800000|15 buổi
+KH05|C#|Nâng cao|Đang mở|5500000|22 buổi
+KH06|Java Core|Cơ bản|Đã đóng|3200000|18 buổi
+KH07|Python|Nâng cao|Đang mở|4800000|20 buổi
+KH08|SQL Server|Cơ bản|Đang mở|2500000|12 buổi

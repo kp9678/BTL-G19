@@ -1,0 +1,10 @@
+HV02|Trần Thị Bình|20/03/2004|Nữ|0969188061|Hưng Yên|binh@gmail.com|CSS|LP01|Đang học
+HV03|Lê Minh Cường|05/06/2003|Nam|0977888999|Hải Dương|cuong@gmail.com|JavaScript|LP02|Đang học
+HV04|Nguyễn Thị Dung|09/09/2002|Nữ|0966333444|Nam Định|dung@gmail.com|ASP.NET|LP03|Bảo lưu
+HV05|Phạm Quốc Huy|12/12/2001|Nam|0933444555|Hà Nam|huy@gmail.com|SQL Server|LP03|Đang học
+HV06|Đỗ Thị Lan|02/11/2004|Nữ|0909090909|Hà Nội|lan@gmail.com|C#|LP02|Đang học
+HV07|Vũ Đức Long|22/05/2003|Nam|0988123456|Thái Bình|long@gmail.com|Python|LP04|Đã nghỉ
+HV08|Hoàng Thu Mai|19/04/2005|Nữ|0977666888|Hải Phòng|mai@gmail.com|Java Core|LP05|Đang học
+HV09|Phạm Văn Nam|07/07/2002|Nam|0966555444|Bắc Ninh|nam@gmail.com|HTML|LP01|Đang học
+HV10|Lê Thị Oanh|18/08/2003|Nữ|0911888777|Hà Nội|oanh@gmail.com|ASP.NET|LP03|Bảo lưu
+HV01|Nguyễn Văn Bố|2026-07-02|Nam|0987654321|Hà Nội|bo@gmail.com|CSS|LP01|Đang học

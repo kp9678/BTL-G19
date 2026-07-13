@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="BTL.Site" %>
+<%@ Register Src="../TrangChu/Sidebar.ascx" TagPrefix="uc" TagName="Sidebar" %>
+<%@ Register Src="../TrangChu/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Hệ Thống Quản Lý Học Tập</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../Scripts/PhanQuyen.js"></script>
+    <link href="../CSS/Site.css" rel="stylesheet" type="text/css" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server"
+      style="display:flex; width:100%; min-height:100vh; flex-direction:row;">
+        
+        <div class="mobile-header">
+            <button type="button" id="menu-toggle" class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button type="button" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+        <uc:Sidebar runat="server" id="Sidebar" />
+
+        <div class="main-container">
+            <div class="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <uc:Footer runat="server" id="Footer" />
+        </div>
+
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const sidebar = document.querySelector(".sidebar");
+            const overlay = document.getElementById("sidebar-overlay");
+
+            menuToggle.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+                overlay.classList.toggle("active");
+            });
+
+            overlay.addEventListener("click", function () {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+            });
+        });
+    </script>
+</body>
+</html>

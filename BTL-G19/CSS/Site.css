@@ -1,0 +1,266 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    height: auto;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #edf2f7;
+    color: #333;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+/* Thanh Menu bên trái (Sidebar) */
+.sidebar {
+    width: 280px;
+    min-width: 280px;
+    background-color: #0b1340;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.sidebar-top {
+    overflow-y: auto;
+}
+
+.logo-area {
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+    .logo-area i {
+        font-size: 32px;
+        color: #fff;
+    }
+
+.logo-text h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo-text p {
+    font-size: 11px;
+    color: #929bc7;
+}
+
+.menu-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.menu-item i {
+    width: 25px;
+    font-size: 16px;
+    margin-right: 15px;
+    color: #94a3b8;
+}
+
+.menu-item.active a {
+    background-color: #1572e8;
+    color: white;
+    font-weight: 600;
+}
+
+.menu-item.active i {
+    color: white;
+}
+
+.menu-item a:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+/* Góc thông tin Admin */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #070c2b;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 15px;
+}
+
+.admin-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .admin-avatar i {
+        font-size: 28px;
+        color: #64748b;
+    }
+
+.admin-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+.admin-info p {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #edf2f7;
+    min-width: 0;
+    margin-left: 280px;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow: visible;
+}
+footer {
+    background-color: #097dd0; 
+    color: white;
+    padding: 15px 20px;
+    border-top: 1px solid #1e3a8a;
+}
+.menu-item.logout a {
+    color: #fca5a5;
+    margin-top: 15px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+    padding-top: 20px;
+}
+
+.menu-item.logout i {
+    color: #ef4444; 
+}
+
+.menu-item.logout a:hover {
+    background-color: #ef4444 !important; 
+    color: white !important;
+}
+
+    .menu-item.logout a:hover i {
+        color: white !important; 
+    }
+
+/*ẨN THANH MENU */
+.mobile-header {
+    display: none;
+}
+
+.sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    form[style*="display:flex"] {
+        flex-direction: column !important;
+        overflow-x: visible;
+    }
+
+    body {
+        overflow-y: auto; 
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 56px;
+        background-color: #1572e8; 
+        color: white;
+        padding: 0 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .toggle-btn, .add-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .mobile-title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .main-container {
+        margin-left: 0;
+        margin-top: 56px;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px; 
+        width: 280px;
+        height: 100%;
+        z-index: 1001;
+        transition: transform 0.3s ease; 
+    }
+
+        .sidebar.active {
+            transform: translateX(280px); 
+        }
+
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+}
